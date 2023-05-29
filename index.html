@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+    <!--Script to save value from NameInput to localstorage for passing to todo.html -->
+    <script>
+        function getNamefunction(){
+            var itemname=document.getElementById('NameInput').value;
+            localStorage.setItem("textvalue",itemname);
+            if(itemname.value==""){
+                console.log('Unable to accept null')
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <!--Main Form-->
+    <form action="todo.html">
+        <div class="container">
+            <!-- <video autoplay loop muted class="background-clip">
+                <source src="image\itachi.mp4" type="video/mp4">
+            </video> -->
+            
+            
+            <div class="content">
+                <div class="nameLabel">
+                    <h1 id="indexLabel">Welcome to To-Do List App!</h1>
+                </div>
+                <div class="nameClass">
+                    <input type="text" class="userInput" id="NameInput" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="btnClass">
+                    <input type="submit" class="buttonClass" id="btn" value="Proceed" onclick="getNamefunction();"/>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    
+    <script src="apps.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

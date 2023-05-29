@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Slabo+27px&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="todo.css">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+    
+    <div class="container">
+        
+        <!-- <video autoplay loop muted class="background-clip">
+            <source src="image\itachi.mp4" type="video/mp4">
+        </video> 
+         -->
+        <div class="Todo-Container">
+            <div class="header">
+                <h1>Hello <span id="itemName"></span>!!</h1>
+                <h1>This is your To-do List.</h1>
+            </div>
+
+            <div class="inputTodoContainer">
+                <input type="text" class="classTodo" id="inputTodo" placeholder="Enter your tasks" required maxlength="15">
+                <button id="btnSubmit">SAVE</button>
+                <button id="exitBtn">Exit</button>
+            </div>
+
+            <div class="to-dos" id="toDocontainer"></div>
+            
+        </div>
+    </div>
+    <!-- calling function from index.html to get the value from NameInput saved from localstorage-->
+    <script>document.getElementById('itemName').innerHTML=localStorage.getItem("textvalue");</script>
+    <script src="apps.js"></script>
+</body>
+</html>
